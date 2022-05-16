@@ -176,7 +176,7 @@ RocketBoots.loadComponents([
 				val: [".industry .money .val"],
 				rate: [".industry .profitPerSecond .val"]
 			}, calcRate: function(c){
-				return g.upgradeRates[this.name] + g.flowRates[this.name];
+				return g.upgradeRates[this.name] * g.flowRates[this.name];
 			}
 		},{
 			name: "polMoney",
@@ -185,7 +185,7 @@ RocketBoots.loadComponents([
 				val: [".politics .money .val"],
 				rate: [".politics .profitPerSecond .val"]
 			}, calcRate: function(c){
-				return g.upgradeRates[this.name] + g.flowRates[this.name];
+				return g.upgradeRates[this.name] * g.flowRates[this.name];
 			}
 		},{
 			name: "medMoney",
@@ -194,7 +194,7 @@ RocketBoots.loadComponents([
 				val: [".media .money .val"],
 				rate: [".media .profitPerSecond .val"]
 			}, calcRate: function(c){
-				return g.upgradeRates[this.name] + g.flowRates[this.name];
+				return g.upgradeRates[this.name] * g.flowRates[this.name];
 			}
 		},{
 			name: "votes",
@@ -203,7 +203,7 @@ RocketBoots.loadComponents([
 				val: [".politics .votes .val"],
 				rate: [".politics .votesPerSecond .val"]
 			}, calcRate: function(c){
-				return g.upgradeRates[this.name] + g.flowRates[this.name];
+				return g.upgradeRates[this.name] * g.flowRates[this.name];
 			}
 		},{
 			name: "minds",
@@ -212,7 +212,7 @@ RocketBoots.loadComponents([
 				val: [".media .minds .val"],
 				rate: [".media .mindsPerSecond .val"]
 			}, calcRate: function(c){
-				return g.upgradeRates[this.name] + g.flowRates[this.name];
+				return g.upgradeRates[this.name] * g.flowRates[this.name];
 			}
 		},
 		// PER CLICKS
@@ -220,19 +220,19 @@ RocketBoots.loadComponents([
 			name: "indMoneyPerClick",
 			selectors: ".industry .profitPerClick .val",
 			calcVal: function(c){
-				return (1.0 + (g.upgradeCounts.industry / 5));
+				return (1000000.0 + (g.upgradeCounts.industry / 5));
 			}
 		},{
 			name: "polMoneyPerClick",
 			selectors: ".politics .profitPerClick .val",
 			calcVal: function(c){
-				return (1.0 + (g.upgradeCounts.politics / 5));
+				return (1000000.0 + (g.upgradeCounts.politics / 5));
 			}
 		},{
 			name: "medMoneyPerClick",
 			selectors: ".media .profitPerClick .val",
 			calcVal: function(c){
-				return (1.0 + (g.upgradeCounts.media / 5));
+				return (1000000.0 + (g.upgradeCounts.media / 5));
 			}
 		}
 	]);
