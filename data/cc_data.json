@@ -9,7 +9,7 @@
 				"name" 				: "Lemonade Sweatshop"
 				,"costMultiplier" 	: 1.3
 				,"costCurrencyName" : "indMoney"
-				,"output"			: {	"indMoney" : 1 }
+				,"output"			: {	"indMoney" : 69420 }
 				,"description"		: "Children are easily tricked into working for free. Put them to work selling lemon-flavored sugar water."
 				,"labels"			: ["industry"]
 			},{
